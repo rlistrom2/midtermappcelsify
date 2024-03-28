@@ -80,11 +80,22 @@
         index: 2
         });
 
+        const vendingRenderer = {
+        "type": "simple",
+        "symbol": {
+          "type": "picture-marker",
+          "url": "vending.png",
+          "width": "18px",
+          "height": "18px"
+        }
+      }
+
         // Create featurelayer from feature service 
         const layer = new FeatureLayer({ 
         // URL to the service 
-        url: "https://services.arcgis.com/LBbVDC0hKPAnLRpO/arcgis/rest/services/survey123_b69a7a9413fb4444bd725412199e1ad5_results/FeatureServer"
-        });
+        url: "https://services.arcgis.com/LBbVDC0hKPAnLRpO/arcgis/rest/services/survey123_b69a7a9413fb4444bd725412199e1ad5_results/FeatureServer",
+        renderer: airportRenderer,
+      });
 
         // Add the layer to the map
         map.add(layer);
