@@ -101,16 +101,19 @@
         map.add(layer);
 
 
-        const legend = new Legend({
-        view: view,
-        layerInfos: [{
-          layer: layer,
-          title: "Vending Machine Locations"
-          }]
-        });
+        view.when(function() {
+    // Create a new instance of the Legend class
+    const legend = new Legend({
+      view: view,
+      layerInfos: [{
+        layer: layer,
+        title: "Vending Machine Locations"
+      }]
+    });
 
-        // Add the legend to the bottom of the view
-        view.ui.add(legend, "bottom");
+    // Add the legend to the bottom of the view
+    view.ui.add(legend, "bottom");
+      });
   
 
         });
