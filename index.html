@@ -100,6 +100,7 @@
         // Add the layer to the map
         map.add(layer);
 
+
         view.when(function() {
     // Create a new instance of the Legend class
     const legend = new Legend({
@@ -107,11 +108,8 @@
       layerInfos: [{
         layer: layer,
         title: "Vending Machine Locations"
-      }],
-      container: document.createElement("div") // Create a new div for the legend
+      }]
     });
-
-    legend.container.id = "legendDiv"; // Assign a unique id to the div
 
     // Add the legend to the bottom of the view
     view.ui.add(legend, "bottom");
@@ -122,15 +120,6 @@
         </script>
 
   </head>
-
-  <style>
-    @media (max-width: 600px) {
-      #legendDiv {
-        transform: scale(0.5);
-      }
-    }
-    </style>
-
   <body>
 
     <a href="https://arcg.is/0nLy5X1"target="_blank" class="addRecordBtn">Add Record</a>
